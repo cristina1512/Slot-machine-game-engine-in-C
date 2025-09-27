@@ -2,7 +2,7 @@ This program simulates the behavior of a slot machine using custom data structur
 
 =============================================================================================================================================================================
 
-Specifications
+# Specifications
 
 There will be a number N of rows and M of columns, representing all the symbols in this simulator. The columns can move independently of each other, and the symbols within a column always remain in the same relative order (for example, [1, 2, 3, 4] may become [3, 4, 1, 2], but never [1, 3, 2, 4]), following the rotation movement of the columns. There will be at most 10 distinct symbols, which we conveniently number from 0 to 9 (each digit representing a symbol code).
 
@@ -27,7 +27,7 @@ The quadrant contains the first three rows, i.e. the symbols:
 
 =============================================================================================================================================================================
 
-How to run the program
+# How to run the program
 
 To test the implementation, run in the terminal the following commands:
 `````
@@ -37,8 +37,7 @@ make
 
 =============================================================================================================================================================================
 
-
-Input Format
+# Input Format
 
 The first line contains the number of the task that the user wants the program to execute.
 On the second line, 2 integers, N and M separated by space. N is the number of lines of the slot machine, M is the number of collums.
@@ -47,7 +46,7 @@ The rest is tailored to each task.
 
 =============================================================================================================================================================================
 
-TASK 1
+# TASK 1
 
 We want to rotate a specified column. For example, if we have a matrix with 5 rows and 3 columns, and we want to rotate the second column by 3 positions, the operation means shifting the symbols of that column downward by three positions, while keeping the first and last columns unchanged. The rotation occurs in the natural direction (top to bottom), and the symbols that “fall out of the matrix” are placed back at the beginning of the same column.
 
@@ -83,7 +82,7 @@ The matrix obtained after the specified rotation will be displayed. Each row wil
 
 =============================================================================================================================================================================
 
-TASK 2
+# TASK 2
 
 Given a matrix configuration, the program finds all winning combinations. A winning combination is a sequence of symbols located inside the 3×M quadrant that satisfies the following rules:
 
@@ -130,7 +129,7 @@ Two numbers will be displayed, each on a separate line: the first value represen
 
 =============================================================================================================================================================================
 
-TASK 3
+# TASK 3
 
 The input will first provide the dimensions of the matrix, followed by the matrix itself, and then a series of operations in the form of pairs (column, rotation). Finally, the program will output the total score obtained from the final matrix configuration, summing all scores accumulated during each intermediate stage.
 
@@ -153,7 +152,7 @@ A single number will be displayed, representing the sum of all scores obtained f
 
 =============================================================================================================================================================================
 
-TASK 4
+# TASK 4
 
 The user might wonder what could be achieved if they were allowed to change a single symbol in the matrix. The program implements this functionality. Specifically, the user wants to replace a symbol at a given position with another symbol in order to maximize the possible score from this operation.
 
@@ -171,7 +170,7 @@ A single number will be displayed, representing the maximum total score achievab
 
 =============================================================================================================================================================================
 
-TASK 5
+# TASK 5
 
 The user may consider another possibility: since they cannot change the values already in the machine, they envision being able to rotate any two columns of their choice to achieve the maximum score. The program determines the maximum possible score obtainable from two such rotations.
 
@@ -200,7 +199,7 @@ Constraints
 
 =============================================================================================================================================================================
 
-Documentation
+# Documentation
 
 Functions:
     - AlocateMatrix: Allocates memory for a matrix of size N x M
@@ -225,5 +224,3 @@ Main Function:
 The program reads the task number (nrtask), matrix dimensions (N, M), and the matrix itself. Then, depending on the task, it read other data.
 
 The program allocates memory for the matrix and auxiliary arrays using AlocateMatrix and AlocateArray. At the end, it frees all allocated memory at the end to avoid leaks.
-
-Slot-machine-game-engine-in-C
